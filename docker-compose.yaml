@@ -1,0 +1,12 @@
+services:
+  healthcare-chatbot:
+    container_name: healthcare-chatbot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - 8000:80
+    volumes:
+      - .:/app
