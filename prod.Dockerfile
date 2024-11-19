@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # run the application
-CMD uvicorn app:app --port 8000
+CMD uvicorn app:app --host 0.0.0.0 --port 80
