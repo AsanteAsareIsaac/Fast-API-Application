@@ -13,5 +13,8 @@ RUN pip install -r requirements.txt
 # copy the source code into working directory in the container
 COPY . .
 
+# expose port
+EXPOSE 80
+
 # run the application
 CMD uvicorn app:app --host 0.0.0.0 --port 80
